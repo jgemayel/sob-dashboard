@@ -17,6 +17,21 @@ body {
   min-height: 100vh;
 }
 
+/* Ensure main content never slides under sidebar */
+main {
+  overflow-x: hidden;
+}
+
+/* Chart containers should not overflow */
+.recharts-responsive-container {
+  max-width: 100%;
+}
+
+/* Grid gap consistency */
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

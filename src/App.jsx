@@ -18,6 +18,16 @@ const TAB_TITLES = {
   concentration: 'Concentration Risk',
 };
 
+const TAB_DESCRIPTIONS = {
+  executive: 'Consolidated sector overview with key performance indicators, concentration analysis, and CAMELS diagnostic scorecard.',
+  financial: 'Three-year balance sheet and income statement analysis across all 6 state-owned banks.',
+  ratios: 'Prudential ratios with MENA peer benchmarks and Basel III reference lines.',
+  deepdive: 'Individual bank profiles with full financial data, qualitative assessments, and CAMELS ratings.',
+  benchmarking: 'Gap analysis against Basel III, MENA SOB peers, and international standards.',
+  branches: 'Branch and office network distribution across 14 Syrian governorates.',
+  concentration: 'Market concentration analysis — HHI, CBS dominance, ACB funding dependency, equity composition.',
+};
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('executive');
 
@@ -35,26 +45,26 @@ export default function App() {
   };
 
   return (
-    <div className="flex min-h-screen" style={{ background: '#0a0e17' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#0a0e17' }}>
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className="ml-56 flex-1 p-6 min-h-screen">
-        <header className="mb-6 flex items-center justify-between">
+      <main style={{ marginLeft: '240px', flex: 1, minHeight: '100vh', padding: '24px 32px', maxWidth: 'calc(100vw - 240px)' }}>
+        {/* Header */}
+        <header style={{ marginBottom: '20px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div>
-            <h1 className="text-xl font-bold text-white">{TAB_TITLES[activeTab]}</h1>
-            <p className="text-xs text-[#64748b] mt-0.5">Syrian State-Owned Banks Diagnostic &middot; Data: 2022-2024 &middot; All amounts in SYP Billions unless noted</p>
+            <h1 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', margin: 0 }}>{TAB_TITLES[activeTab]}</h1>
+            <p style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>{TAB_DESCRIPTIONS[activeTab]}</p>
           </div>
-          <div className="text-right">
-            <div className="text-[10px] text-[#475569]">Last updated: Q4 2024</div>
-            <div className="text-[10px] text-[#475569]">6 State-Owned Banks &middot; 438 Service Points</div>
+          <div style={{ textAlign: 'right', flexShrink: 0, marginLeft: '24px' }}>
+            <div style={{ fontSize: '10px', color: '#475569' }}>Data: 2022-2024 &middot; All amounts in SYP Billions</div>
+            <div style={{ fontSize: '10px', color: '#475569' }}>6 State-Owned Banks &middot; 438 Service Points &middot; 90/90 validations passed</div>
           </div>
         </header>
-        {activeTab === 'executive' && (
-          <div className="mb-4 px-4 py-3 rounded-lg text-xs text-[#94a3b8]" style={{ background: '#111827', border: '1px solid #1e293b' }}>
-            Diagnostic assessment of Syria's 6 state-owned banks (2022-2024). Data validated: 90/90 automated checks passed.
-          </div>
-        )}
+
+        {/* Tab content */}
         {renderTab()}
-        <footer className="mt-8 pt-4 border-t border-[#1e293b] text-center text-[10px] text-[#475569]">
+
+        {/* Footer */}
+        <footer style={{ marginTop: '32px', paddingTop: '16px', borderTop: '1px solid #1e293b', textAlign: 'center', fontSize: '10px', color: '#475569' }}>
           SOB Diagnostic Dashboard &middot; Syria Central Bank Reform Project &middot; Confidential
         </footer>
       </main>
