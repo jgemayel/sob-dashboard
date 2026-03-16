@@ -2,6 +2,7 @@ import { BANK_COLORS } from '../data/bankData';
 
 const tabs = [
   { id: 'executive',     icon: '⬡', label: 'Executive' },
+  { id: 'hypotheses',    icon: '◈', label: 'Hypotheses' },
   { id: 'financial',     icon: '▤', label: 'Financial' },
   { id: 'ratios',        icon: '◎', label: 'Ratios' },
   { id: 'deepdive',      icon: '◉', label: 'Deep Dive' },
