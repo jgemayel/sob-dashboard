@@ -23,7 +23,7 @@ export const BANK_NAMES = {
 export const BANK_PROFILES = {
   CBS: { name: 'Commercial Bank of Syria', abbr: 'CBS', decree: 'Decree 35/2006', capital: 70, capitalYear: 2010, servicePoints: 141, branches: 73, offices: 68, damascus: '32+18=50' },
   ACB: { name: 'Agricultural Co-op Bank', abbr: 'ACB', decree: 'Law 3/1969', capital: 40, capitalYear: 2011, servicePoints: 111, branches: 106, offices: 5, keyRegions: 'Aleppo: 17, Hasakeh: 17' },
-  REB: { name: 'Real Estate Bank', abbr: 'REB', decree: 'Decree 28/1966', capital: 10, capitalYear: 'pre-2011', servicePoints: 45, branches: 22, offices: 23 },
+  REB: { name: 'Real Estate Bank', abbr: 'REB', decree: 'Decree 28/1966', capital: 10, capitalYear: 'Before 2011', servicePoints: 45, branches: 22, offices: 23 },
   PCB: { name: 'Popular Credit Bank', abbr: 'PCB', decree: 'Decree 108/1966', capital: 10, capitalYear: 2009, servicePoints: 60, branches: 59, offices: 1 },
   SB:  { name: 'Saving Bank', abbr: 'SB', decree: 'Decree 29/1975', capital: 10, capitalYear: 2010, servicePoints: 59, branches: 14, offices: 45 },
   IB:  { name: 'Industrial Bank', abbr: 'IB', decree: 'Decree 28/1959', capital: 14, capitalYear: 2021, servicePoints: 22, branches: 17, offices: 5 },
@@ -83,26 +83,33 @@ export const BRANCH_NETWORK = {
 
 // Qualitative Data
 export const QUALITATIVE = {
-  coreBanking: { CBS: 'Expired 6-7 years', REB: 'Has CBS', IB: 'Integrated Banking Program', ACB: 'Has CBS', PCB: 'Has CBS', SB: 'Testing phase' },
+  coreBanking: {
+    CBS: 'System installed but out of vendor support for 6-7 years; no patches or updates available',
+    REB: 'Core banking system operational',
+    IB:  'Integrated Banking Program in use',
+    ACB: 'Core banking system operational',
+    PCB: 'Core banking system operational',
+    SB:  'Core banking system in pilot/testing phase; not yet fully deployed',
+  },
   sanctions:   { CBS: 'SEVERE', REB: 'SEVERE', IB: 'MINIMAL', ACB: 'INDIRECT', PCB: 'INDIRECT', SB: 'MODERATE' },
   sanctionsDetail: {
-    CBS: 'SWIFT off, assets frozen, Visa/MC blocked',
-    REB: 'Funds frozen, SWIFT off',
-    IB:  'Minimal impact',
-    ACB: 'Indirect impact',
-    PCB: 'Indirect impact',
-    SB:  'Moderate impact',
+    CBS: 'SWIFT disconnected, foreign assets frozen, Visa/Mastercard blocked, unable to procure system upgrades',
+    REB: 'Foreign funds frozen, SWIFT disconnected, EIB loan book inflated by FX movements',
+    IB:  'No direct sanctions impact — no foreign currency dealings or external transactions',
+    ACB: 'Indirect impact through inflation and increased liquidity requirements for lending operations',
+    PCB: 'Indirect impact — unable to procure technology supplies; affected by FX instability',
+    SB:  'Moderate impact — equipment/supply shortages, energy disruptions, liquidity constraints',
   },
   capitalIncrease: { CBS: false, ACB: false, REB: false, PCB: false, SB: false, IB: true },
 };
 
 // CAMELS
 export const CAMELS = {
-  capital:     { CBS: 'FAIL(adj)', ACB: 'FAIL', REB: 'FAIL', PCB: 'FAIL', SB: 'MARGINAL', IB: 'MARGINAL' },
-  assets:      { CBS: 'UNKNOWN', ACB: 'LOW_RISK', REB: 'UNKNOWN', PCB: 'UNKNOWN', SB: 'UNKNOWN', IB: 'IMPAIRED' },
+  capital:     { CBS: 'FAIL (adj.)', ACB: 'FAIL', REB: 'FAIL', PCB: 'FAIL', SB: 'MARGINAL', IB: 'MARGINAL' },
+  assets:      { CBS: 'NO DATA', ACB: 'LOW RISK', REB: 'NO DATA', PCB: 'NO DATA', SB: 'NO DATA', IB: 'IMPAIRED' },
   management:  { CBS: 'WEAK', ACB: 'WEAK', REB: 'WEAK', PCB: 'WEAK', SB: 'WEAK', IB: 'WEAK' },
-  earnings:    { CBS: 'FRAGILE', ACB: 'LEVERAGE', REB: 'DECLINING', PCB: 'LEVERAGE', SB: 'RECOVERING', IB: 'STRONG' },
-  liquidity:   { CBS: 'ADEQUATE', ACB: 'CBS_DEPENDENT', REB: 'ADEQUATE', PCB: 'ADEQUATE', SB: 'ADEQUATE', IB: 'ADEQUATE' },
+  earnings:    { CBS: 'FRAGILE', ACB: 'LEVERAGE-DRIVEN', REB: 'DECLINING', PCB: 'LEVERAGE-DRIVEN', SB: 'RECOVERING', IB: 'STRONG' },
+  liquidity:   { CBS: 'ADEQUATE', ACB: 'CBS-DEPENDENT', REB: 'ADEQUATE', PCB: 'ADEQUATE', SB: 'ADEQUATE', IB: 'ADEQUATE' },
   sensitivity: { CBS: 'EXTREME', ACB: 'INDIRECT', REB: 'HIGH', PCB: 'MODERATE', SB: 'MODERATE', IB: 'LOW' },
 };
 

@@ -23,12 +23,12 @@ const HYPOTHESES = [
       'SYP 154B at 2010 rates ≈ USD 3.4B; at 2024 rates ≈ USD 12M — 99.6% real erosion',
     ],
     benchmarks: [
-      { name: 'Syria SOBs (adj.)', value: 0.8 },
-      { name: 'Basel III Min', value: 8.0 },
+      { name: 'Syria SOBs (adjusted)', value: 0.8 },
+      { name: 'Basel III Minimum', value: 8.0 },
       { name: 'Iraq SOBs (2005)', value: 4.0 },
-      { name: 'Egypt SOBs', value: 14.0 },
-      { name: 'Jordan HB', value: 16.0 },
-      { name: 'Morocco SOBs', value: 13.0 },
+      { name: 'Egypt SOBs (2023)', value: 14.0 },
+      { name: 'Jordan Housing Bank', value: 16.0 },
+      { name: 'Morocco SOBs (2023)', value: 13.0 },
     ],
   },
   {
@@ -43,7 +43,7 @@ const HYPOTHESES = [
       'CBS survey data: SYP 3.47T "old" NPLs vs. SYP 24.1T loan book = 14.4% self-reported',
       'Post-conflict comparison: Iraq SOBs had 50-70% NPLs; Lebanon 30-50%; Libya 35%',
       'IB NPL ratio: 65.1% (2022) → 11.9% (2024) — improving but still above MENA 7-10%',
-      'ACB NPL ratio: 0.7% — suspiciously low for agricultural lending in a conflict zone',
+      'ACB NPL ratio: 0.7% — unusually low for agricultural lending in a post-conflict environment; may indicate underreporting',
       'No IFRS 9 expected credit loss provisioning at any bank',
       'No independent external audit — government auditor only',
     ],
@@ -51,8 +51,8 @@ const HYPOTHESES = [
       { name: 'ACB (reported)', value: 0.7 },
       { name: 'MENA Average', value: 8.5 },
       { name: 'IB', value: 11.9 },
-      { name: 'CBS (self-rpt)', value: 14.4 },
-      { name: 'CBS (OW est.)', value: 30.0 },
+      { name: 'CBS (self-reported)', value: 14.4 },
+      { name: 'CBS (estimated)', value: 30.0 },
       { name: 'Iraq (2005)', value: 60.0 },
     ],
   },
@@ -65,12 +65,12 @@ const HYPOTHESES = [
     summary: 'Sector profit growth decelerated from +160% (2023) to +5% (2024). CBS profit fell 30% YoY. ACB\'s 66% ROE is a leverage artifact (52.6x leverage, 1,353% LDR). Only IB and SB have sustainable earnings models. Revenue is ~95% NII with zero diversification.',
     evidence: [
       'CBS profit declined 30% YoY: SYP 131.9B (2023) → SYP 92.5B (2024)',
-      'CBS ROA of 0.10% is far below any MENA peer (Egypt: 1.7%, Jordan: 1.3%)',
+      'CBS ROA of 0.10% is significantly below all MENA peers (Egypt: 1.7%, Jordan: 1.3%)',
       'ACB ROE of 66% driven entirely by 52.6x leverage — not operational efficiency',
       'ACB borrows SYP 9.4T from CBS to lend at spread — circular funding chain',
       'REB profit collapsed 63%: SYP 35.0B → SYP 12.8B (capital losses of SYP 19.8B)',
-      'Cost-to-income ratios (11-52%) reflect wage suppression and zero tech investment',
-      'Revenue mix ~95% NII vs. MENA norm 65-75% — zero diversification',
+      'Cost-to-income ratios (11-52%) reflect wage compression and minimal technology investment, not operational efficiency',
+      'Revenue composition approximately 95% net interest income vs. MENA norm of 65-75% — no meaningful diversification',
     ],
     benchmarks: [
       { name: 'CBS', value: 0.10 },
@@ -100,7 +100,7 @@ const HYPOTHESES = [
       'Afghanistan (2021): SWIFT cutoff froze dominant bank → entire payment system collapsed',
     ],
     benchmarks: [
-      { name: 'ACB (Dep/Liab)', value: 6.6 },
+      { name: 'ACB (Deposits/Liabilities)', value: 6.6 },
       { name: 'CBS', value: 46.0 },
       { name: 'REB', value: 70.2 },
       { name: 'PCB', value: 80.4 },
@@ -117,13 +117,13 @@ const HYPOTHESES = [
     summary: 'CBS — the bank holding 86% of assets — runs on a core banking system that has been out of vendor support for 6-7 years. No bank offers digital banking, mobile banking, or credit cards. Sanctions block system upgrades. Brain drain has depleted risk, IT, and compliance talent. Branches in 5+ governorates have been destroyed.',
     evidence: [
       'CBS core banking: expired and unsupported for 6-7 years — any system failure halts 86% of banking',
-      'SB core banking: still in testing/trial phase — not yet deployed',
+      'SB core banking system remains in pilot/testing phase and is not yet fully deployed',
       'Zero digital banking channels at any bank (no mobile, no internet banking, no cards)',
       'AML/CFT: manual processes only — no automated transaction monitoring at any bank',
       'CBS SWIFT access: disconnected by sanctions — no cross-border payments',
       'CBS Visa/Mastercard: blocked — no card payment capabilities',
       'Destroyed branches: Raqqa, Idlib, Deir ez-Zor, Abu Kamal, Mayadin, Jisr al-Shughur',
-      'Brain drain: skilled staff emigrating since 2011; wages far below market',
+      'Significant loss of skilled personnel through emigration since 2011; compensation levels substantially below private sector and regional benchmarks',
       'No data warehouse, BI, or automated regulatory reporting at any bank',
     ],
     benchmarks: null,
@@ -298,7 +298,7 @@ function H3Detail() {
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
-      <ChartCard title="ROA by Bank (2024)" subtitle="MENA peer range: 1-2% — CBS at 0.10% is far below">
+      <ChartCard title="ROA by Bank (2024)" subtitle="MENA peer range: 1-2% — CBS at 0.10% is significantly below the regional range">
         <ResponsiveContainer width="100%" height={200}>
           <BarChart data={roaData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
@@ -361,12 +361,12 @@ function H4Detail() {
 // H5 specific: Technology status
 function H5Detail() {
   const techData = [
-    { capability: 'Core Banking', standard: 'Supported, vendor-backed', cbs: 'EXPIRED 6-7 yrs', others: 'Functional / Testing', gap: 'CRITICAL' },
-    { capability: 'Digital / Mobile', standard: 'App + internet banking', cbs: 'NONE', others: 'NONE', gap: 'TOTAL' },
-    { capability: 'AML/CFT', standard: 'Automated monitoring', cbs: 'Manual', others: 'Manual', gap: 'TOTAL' },
-    { capability: 'SWIFT', standard: 'Connected', cbs: 'DISCONNECTED', others: 'N/A', gap: 'SEVERE' },
-    { capability: 'Cards (Visa/MC)', standard: 'Issuance + acquiring', cbs: 'SANCTIONED', others: 'NONE', gap: 'TOTAL' },
-    { capability: 'Data Warehouse', standard: 'Centralized analytics', cbs: 'NONE', others: 'NONE', gap: 'TOTAL' },
+    { capability: 'Core Banking System', standard: 'Supported, vendor-maintained', cbs: 'Out of support for 6-7 years', others: 'Operational or in pilot phase', gap: 'CRITICAL' },
+    { capability: 'Digital / Mobile Banking', standard: 'Mobile app and internet banking', cbs: 'Not available', others: 'Not available', gap: 'TOTAL' },
+    { capability: 'AML/CFT Screening', standard: 'Automated transaction monitoring', cbs: 'Manual processes only', others: 'Manual processes only', gap: 'TOTAL' },
+    { capability: 'SWIFT Connectivity', standard: 'Connected for cross-border payments', cbs: 'Disconnected (sanctions)', others: 'Not applicable', gap: 'SEVERE' },
+    { capability: 'Card Networks', standard: 'Visa/Mastercard issuance and acquiring', cbs: 'Blocked by sanctions', others: 'Not available', gap: 'TOTAL' },
+    { capability: 'Data Warehouse / BI', standard: 'Centralized analytics and reporting', cbs: 'Not available', others: 'Not available', gap: 'TOTAL' },
   ];
 
   const gapColors = { CRITICAL: '#ef4444', TOTAL: '#dc2626', SEVERE: '#f59e0b' };
@@ -388,8 +388,8 @@ function H5Detail() {
                 <tr key={i} style={{ borderBottom: '1px solid #1e293b' }}>
                   <td style={{ padding: '8px 12px', color: '#e2e8f0', fontWeight: 600 }}>{r.capability}</td>
                   <td style={{ padding: '8px 12px', color: '#94a3b8' }}>{r.standard}</td>
-                  <td style={{ padding: '8px 12px', color: r.cbs.includes('EXPIRED') || r.cbs === 'DISCONNECTED' || r.cbs === 'SANCTIONED' ? '#fca5a5' : (r.cbs === 'NONE' || r.cbs === 'Manual' ? '#fcd34d' : '#94a3b8'), fontWeight: 600 }}>{r.cbs}</td>
-                  <td style={{ padding: '8px 12px', color: r.others === 'NONE' || r.others === 'Manual' ? '#fcd34d' : '#94a3b8' }}>{r.others}</td>
+                  <td style={{ padding: '8px 12px', color: r.cbs.includes('Out of support') || r.cbs.includes('Disconnected') || r.cbs.includes('Blocked') ? '#fca5a5' : (r.cbs.includes('Not available') || r.cbs.includes('Manual') ? '#fcd34d' : '#94a3b8'), fontWeight: 600 }}>{r.cbs}</td>
+                  <td style={{ padding: '8px 12px', color: r.others.includes('Not available') || r.others.includes('Manual') ? '#fcd34d' : '#94a3b8' }}>{r.others}</td>
                   <td style={{ padding: '8px 12px' }}>
                     <span style={{ fontSize: '10px', fontWeight: 700, padding: '2px 8px', borderRadius: '4px', background: gapColors[r.gap] + '22', color: gapColors[r.gap] }}>{r.gap}</span>
                   </td>

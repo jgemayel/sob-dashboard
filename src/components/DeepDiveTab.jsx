@@ -10,8 +10,8 @@ const CAMELS_KEYS = ['capital', 'assets', 'management', 'earnings', 'liquidity',
 const CAMELS_LABELS = ['Capital', 'Assets', 'Management', 'Earnings', 'Liquidity', 'Sensitivity'];
 
 function severity(val) {
-  const good = ['STRONG', 'ADEQUATE', 'LOW_RISK', 'RECOVERING', 'LOW', 'MARGINAL'];
-  const bad = ['FAIL', 'FAIL(adj)', 'WEAK', 'IMPAIRED', 'EXTREME', 'DECLINING', 'HIGH'];
+  const good = ['STRONG', 'ADEQUATE', 'LOW RISK', 'RECOVERING', 'LOW', 'MARGINAL'];
+  const bad = ['FAIL', 'FAIL (adj.)', 'WEAK', 'IMPAIRED', 'EXTREME', 'DECLINING', 'HIGH'];
   if (good.includes(val)) return 'text-emerald-400';
   if (bad.includes(val)) return 'text-red-400';
   return 'text-yellow-400';

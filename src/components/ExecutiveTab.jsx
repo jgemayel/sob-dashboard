@@ -7,28 +7,17 @@ const CAMELS_LABELS = ['Capital', 'Assets', 'Management', 'Earnings', 'Liquidity
 const CAMELS_KEYS = ['capital', 'assets', 'management', 'earnings', 'liquidity', 'sensitivity'];
 
 function camelsScore(val) {
-  const m = {
-    'FAIL(adj)': { bg: '#991b1b', text: '#fca5a5' },
-    'FAIL':      { bg: '#991b1b', text: '#fca5a5' },
-    'MARGINAL':  { bg: '#92400e', text: '#fcd34d' },
-    'UNKNOWN':   { bg: '#374151', text: '#9ca3af' },
-    'LOW_RISK':  { bg: '#065f46', text: '#6ee7b7' },
-    'IMPAIRED':  { bg: '#991b1b', text: '#fca5a5' },
-    'WEAK':      { bg: '#991b1b', text: '#fca5a5' },
-    'FRAGILE':   { bg: '#92400e', text: '#fcd34d' },
-    'LEVERAGE':  { bg: '#92400e', text: '#fcd34d' },
-    'DECLINING': { bg: '#991b1b', text: '#fca5a5' },
-    'RECOVERING':{ bg: '#065f46', text: '#6ee7b7' },
-    'STRONG':    { bg: '#065f46', text: '#6ee7b7' },
-    'ADEQUATE':  { bg: '#065f46', text: '#6ee7b7' },
-    'CBS_DEPENDENT': { bg: '#92400e', text: '#fcd34d' },
-    'EXTREME':   { bg: '#7f1d1d', text: '#fca5a5' },
-    'INDIRECT':  { bg: '#374151', text: '#9ca3af' },
-    'HIGH':      { bg: '#991b1b', text: '#fca5a5' },
-    'MODERATE':  { bg: '#92400e', text: '#fcd34d' },
-    'LOW':       { bg: '#065f46', text: '#6ee7b7' },
-  };
-  return m[val] || { bg: '#374151', text: '#9ca3af' };
+  // Critical / Fail
+  if (['FAIL', 'FAIL (adj.)', 'IMPAIRED', 'WEAK', 'DECLINING', 'EXTREME', 'HIGH'].includes(val))
+    return { bg: '#991b1b', text: '#fca5a5' };
+  // Warning / Caution
+  if (['MARGINAL', 'FRAGILE', 'LEVERAGE-DRIVEN', 'MODERATE', 'CBS-DEPENDENT'].includes(val))
+    return { bg: '#92400e', text: '#fcd34d' };
+  // Adequate / Good
+  if (['ADEQUATE', 'STRONG', 'LOW RISK', 'RECOVERING', 'LOW'].includes(val))
+    return { bg: '#065f46', text: '#6ee7b7' };
+  // Unknown / No data
+  return { bg: '#374151', text: '#9ca3af' };
 }
 
 export default function ExecutiveTab() {
@@ -83,8 +72,8 @@ export default function ExecutiveTab() {
         <KPICard label="Total Deposits" value={fmtB(t.deposits[2])} delta={(((t.deposits[2]-t.deposits[1])/t.deposits[1])*100).toFixed(0)*1} color="#10b981" sub="2024" />
         <KPICard label="Total Equity" value={fmtB(t.equity[2])} delta={(((t.equity[2]-t.equity[1])/t.equity[1])*100).toFixed(0)*1} color="#f59e0b" sub="2024" />
         <KPICard label="Net Profit" value={`SYP ${t.netProfit[2].toFixed(0)}B`} delta={Number(profitGrowth)} color="#8b5cf6" sub="2024" />
-        <KPICard label="Paid-up Capital" value={`SYP ${t.paidUpCapital}B`} sub="Unchanged since pre-2011" color="#ec4899" />
-        <KPICard label="Equity / Assets" value={`${eqAssets24}%`} sub="Sector Avg (adj.)" color="#06b6d4" />
+        <KPICard label="Paid-up Capital" value={`SYP ${t.paidUpCapital}B`} sub="Unchanged since 2009-2011" color="#ec4899" />
+        <KPICard label="Equity / Assets" value={`${eqAssets24}%`} sub="Sector average (reported)" color="#06b6d4" />
       </div>
 
       {/* Charts Row 1 */}

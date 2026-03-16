@@ -47,7 +47,7 @@ export default function RatiosTab() {
   return (
     <div className="space-y-6">
       <p className="text-xs text-[#94a3b8] leading-relaxed">
-        Prudential ratios across 6 dimensions. Reference lines show MENA peer benchmarks and Basel III minimums. Key concern: CBS ROA of 0.10% is far below any peer; ACB and PCB ROE of 66-70% reflects dangerous leverage, not efficiency.
+        Prudential ratios across 6 dimensions with MENA peer benchmarks and Basel III reference lines. CBS ROA of 0.10% is significantly below all regional peers. ACB and PCB ROE of 66-70% is a function of extreme leverage (52x and 30x respectively), not operational performance.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

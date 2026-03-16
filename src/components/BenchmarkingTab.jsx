@@ -74,8 +74,8 @@ export default function BenchmarkingTab() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
           <div><span className="text-[#64748b]">Basel III CET1</span><p className="text-red-400 font-bold text-lg">4.5%</p><p className="text-[#64748b]">4 of 6 banks FAIL</p></div>
           <div><span className="text-[#64748b]">Basel III Total Capital</span><p className="text-red-400 font-bold text-lg">8.0%</p><p className="text-[#64748b]">ACB: 1.9%, PCB: 3.4%</p></div>
-          <div><span className="text-[#64748b]">MENA Avg ROA</span><p className="text-yellow-400 font-bold text-lg">1-2%</p><p className="text-[#64748b]">CBS: 0.10% (far below)</p></div>
-          <div><span className="text-[#64748b]">MENA Avg NPL</span><p className="text-emerald-400 font-bold text-lg">7-10%</p><p className="text-[#64748b]">IB: 11.9% (above)</p></div>
+          <div><span className="text-[#64748b]">MENA Average ROA</span><p className="text-yellow-400 font-bold text-lg">1-2%</p><p className="text-[#64748b]">CBS at 0.10% — significantly below range</p></div>
+          <div><span className="text-[#64748b]">MENA Average NPL</span><p className="text-emerald-400 font-bold text-lg">7-10%</p><p className="text-[#64748b]">IB at 11.9% — above regional average</p></div>
         </div>
       </div>
 
