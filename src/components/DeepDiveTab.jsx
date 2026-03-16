@@ -46,6 +46,10 @@ export default function DeepDiveTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        Select a bank to view its complete financial profile, qualitative assessment, and CAMELS rating. CBS and ACB have additional detail panels for FX reserves and CBS funding dependency.
+      </p>
+
       {/* Bank selector */}
       <div className="flex items-center gap-3 flex-wrap">
         {BANK_IDS.map(b => (
@@ -64,7 +68,7 @@ export default function DeepDiveTab() {
 
       {/* Profile Card */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <ChartCard title={p.name} subtitle={p.decree}>
+        <ChartCard title={`${BANK_NAMES[selected]} (${selected})`} subtitle={p.decree}>
           <div className="space-y-3 mt-2">
             <div className="flex justify-between text-sm"><span className="text-[#64748b]">Paid-up Capital</span><span className="text-white font-semibold">SYP {p.capital}B</span></div>
             <div className="flex justify-between text-sm"><span className="text-[#64748b]">Last Capital Increase</span><span className="text-white font-semibold">{p.capitalYear}</span></div>

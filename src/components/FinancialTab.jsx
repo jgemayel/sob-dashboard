@@ -69,6 +69,10 @@ export default function FinancialTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        Three-year balance sheet and income statement analysis across all 6 SOBs. Asset growth of 298% (2022-2024) is primarily FX-driven from SYP depreciation, not real economic expansion. CBS dominates all metrics.
+      </p>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <ChartCard title="Total Assets by Bank (Stacked)" subtitle="SYP Billions">
           <ResponsiveContainer width="100%" height={300}>

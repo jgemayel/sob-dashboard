@@ -27,6 +27,10 @@ export default function BranchesTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        The 6 SOBs operate 438 service points (291 branches + 147 offices) across all 14 Syrian governorates. CBS has the largest urban network (50 points in Damascus alone). ACB has the widest rural reach (17 branches each in Aleppo and Al-Hasakeh). Several branches in conflict zones (Raqqa, Idlib, Deir ez-Zor) have been destroyed.
+      </p>
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <KPICard label="Total Service Points" value={totalAll} color="#3b82f6" />
         <KPICard label="Branches" value={totalBranches} color="#10b981" sub={`${((totalBranches/totalAll)*100).toFixed(0)}% of total`} />

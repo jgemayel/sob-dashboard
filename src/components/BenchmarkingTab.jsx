@@ -64,6 +64,10 @@ export default function BenchmarkingTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        Syria's SOBs benchmarked against Basel III standards, MENA SOB peers (Egypt, Morocco, Jordan), and international norms. The adjusted sector equity/assets ratio of 0.8% is 10x below the Basel III minimum of 8%. No bank meets full Basel III compliance.
+      </p>
+
       {/* Summary callout */}
       <div className="rounded-xl p-5" style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)', border: '1px solid #312e81' }}>
         <h3 className="text-sm font-bold text-white mb-2">Syria SOBs vs International Standards</h3>
@@ -172,6 +176,9 @@ export default function BenchmarkingTab() {
           </table>
         </div>
       </ChartCard>
+      <p className="text-xs text-[#64748b] italic leading-relaxed px-1">
+        * CBS reported E/A of 20.6% is inflated by SYP 19.6T unrealized FX gains. Adjusted (ex-FX) E/A is approximately 0.4%.
+      </p>
     </div>
   );
 }

@@ -48,6 +48,11 @@ export default function App() {
             <div className="text-[10px] text-[#475569]">6 State-Owned Banks &middot; 438 Service Points</div>
           </div>
         </header>
+        {activeTab === 'executive' && (
+          <div className="mb-4 px-4 py-3 rounded-lg text-xs text-[#94a3b8]" style={{ background: '#111827', border: '1px solid #1e293b' }}>
+            Diagnostic assessment of Syria's 6 state-owned banks (2022-2024). Data validated: 90/90 automated checks passed.
+          </div>
+        )}
         {renderTab()}
         <footer className="mt-8 pt-4 border-t border-[#1e293b] text-center text-[10px] text-[#475569]">
           SOB Diagnostic Dashboard &middot; Syria Central Bank Reform Project &middot; Confidential

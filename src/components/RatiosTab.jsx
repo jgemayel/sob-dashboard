@@ -1,4 +1,4 @@
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, ReferenceLine } from 'recharts';
+import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, ReferenceLine, Cell } from 'recharts';
 import ChartCard from './ChartCard';
 import { BANK_IDS, BANK_COLORS, RATIOS, YEARS, BENCHMARKS } from '../data/bankData';
 
@@ -46,6 +46,10 @@ export default function RatiosTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        Prudential ratios across 6 dimensions. Reference lines show MENA peer benchmarks and Basel III minimums. Key concern: CBS ROA of 0.10% is far below any peer; ACB and PCB ROE of 66-70% reflects dangerous leverage, not efficiency.
+      </p>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <ChartCard title="Return on Assets (ROA %)" subtitle="MENA avg: 1-2%">
           <ResponsiveContainer width="100%" height={280}>
@@ -170,7 +174,7 @@ export default function RatiosTab() {
               }} />
               <ReferenceLine y={10} stroke="#ef4444" strokeDasharray="5 5" label={{ value: 'MENA Avg High', fill: '#ef4444', fontSize: 10 }} />
               <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-                {nplBar.map((e, i) => <Bar key={i} fill={e.fill} />)}
+                {nplBar.map((e, i) => <Cell key={i} fill={e.fill} />)}
               </Bar>
             </BarChart>
           </ResponsiveContainer>

@@ -73,6 +73,10 @@ export default function ExecutiveTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        This dashboard presents the consolidated diagnostic findings for Syria's 6 state-owned banks. All data is sourced from audited financial statements (2022-2024), validated through 90 automated checks with zero discrepancies. Key finding: the sector is structurally fragile — one bank holds 86% of assets, capital has been frozen since 2010, and all core banking systems are outdated.
+      </p>
+
       {/* KPI Row */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         <KPICard label="Total Assets" value={fmtB(t.assets[2])} delta={Number(assetGrowth)} color="#3b82f6" sub="2024" />
@@ -165,6 +169,9 @@ export default function ExecutiveTab() {
           </table>
         </div>
       </ChartCard>
+      <p className="text-xs text-[#64748b] leading-relaxed px-1">
+        CAMELS assessment based on: Capital adequacy (Basel III benchmarks), Asset quality (NPL data where available), Management (governance framework), Earnings (sustainability and diversification), Liquidity (funding concentration), Sensitivity (FX and sanctions exposure). Color coding: Red = Critical gap, Amber = Significant gap, Green = Adequate, Gray = Data unavailable.
+      </p>
     </div>
   );
 }

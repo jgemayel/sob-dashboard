@@ -62,6 +62,10 @@ export default function ConcentrationTab() {
 
   return (
     <div className="space-y-6">
+      <p className="text-xs text-[#94a3b8] leading-relaxed">
+        Concentration risk analysis using the Herfindahl-Hirschman Index (HHI). A score above 2,500 indicates a highly concentrated market. Syria's SOB sector scores ~7,500 on assets — among the most concentrated banking sectors globally. CBS holds 86% of assets, 90% of deposits, and 98% of equity.
+      </p>
+
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <KPICard label="HHI Assets" value={hhiAssets} color="#ef4444" sub=">2500 = highly concentrated" />
         <KPICard label="HHI Deposits" value={hhiDeposits} color="#f59e0b" sub=">2500 = highly concentrated" />
