@@ -23,13 +23,13 @@ const TAB_TITLES = {
 
 const TAB_DESCRIPTIONS = {
   executive: 'Consolidated sector overview with key performance indicators, concentration analysis, and CAMELS diagnostic scorecard.',
-  hypotheses: 'Six hypothesis-driven findings across the CAMELS framework — each stated as a claim, then validated with data and international benchmarks.',
+  hypotheses: 'Six hypothesis-driven findings across the CAMELS framework \u2014 each stated as a claim, then validated with data and international benchmarks.',
   financial: 'Three-year balance sheet and income statement analysis across all 6 state-owned banks.',
   ratios: 'Prudential ratios with MENA peer benchmarks and Basel III reference lines.',
   deepdive: 'Individual bank profiles with full financial data, qualitative assessments, and CAMELS ratings.',
   benchmarking: 'Gap analysis against Basel III, MENA SOB peers, and international standards.',
   branches: 'Branch and office network distribution across 14 Syrian governorates.',
-  concentration: 'Market concentration analysis — HHI, CBS dominance, ACB funding dependency, equity composition.',
+  concentration: 'Market concentration analysis \u2014 HHI, CBS dominance, ACB funding dependency, equity composition.',
 };
 
 export default function App() {
@@ -55,7 +55,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0a0e17' }}>
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
       <main style={{ marginLeft: '240px', flex: 1, minHeight: '100vh', padding: '24px 32px', maxWidth: 'calc(100vw - 240px)' }}>
         {/* Header */}
@@ -70,8 +70,10 @@ export default function App() {
           </div>
         </header>
 
-        {/* Tab content */}
-        {renderTab()}
+        {/* Tab content with fade-in animation on tab change */}
+        <div key={activeTab} className="tab-fade-in">
+          {renderTab()}
+        </div>
 
         {/* Footer */}
         <footer style={{ marginTop: '32px', paddingTop: '16px', borderTop: '1px solid #1e293b', textAlign: 'center', fontSize: '10px', color: '#475569' }}>

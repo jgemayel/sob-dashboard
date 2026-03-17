@@ -1,14 +1,14 @@
 import { BANK_COLORS } from '../data/bankData';
 
 const tabs = [
-  { id: 'executive',     icon: '⬡', label: 'Executive' },
-  { id: 'hypotheses',    icon: '◈', label: 'Hypotheses' },
-  { id: 'financial',     icon: '▤', label: 'Financial' },
-  { id: 'ratios',        icon: '◎', label: 'Ratios' },
-  { id: 'deepdive',      icon: '◉', label: 'Deep Dive' },
-  { id: 'benchmarking',  icon: '⊞', label: 'Benchmarks' },
-  { id: 'branches',      icon: '⊡', label: 'Branches' },
-  { id: 'concentration', icon: '◬', label: 'Concentration' },
+  { id: 'executive',     icon: '\u2B21', label: 'Executive' },
+  { id: 'hypotheses',    icon: '\u25C8', label: 'Hypotheses' },
+  { id: 'financial',     icon: '\u25A4', label: 'Financial' },
+  { id: 'ratios',        icon: '\u25CE', label: 'Ratios' },
+  { id: 'deepdive',      icon: '\u25C9', label: 'Deep Dive' },
+  { id: 'benchmarking',  icon: '\u229E', label: 'Benchmarks' },
+  { id: 'branches',      icon: '\u22A1', label: 'Branches' },
+  { id: 'concentration', icon: '\u25EC', label: 'Concentration' },
 ];
 
 export default function Sidebar({ activeTab, setActiveTab }) {
@@ -20,6 +20,19 @@ export default function Sidebar({ activeTab, setActiveTab }) {
       borderRight: '1px solid #1e293b',
       overflow: 'hidden',
     }}>
+      {/* Animated gradient edge line */}
+      <div style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '2px',
+        height: '100%',
+        background: 'linear-gradient(180deg, transparent 0%, #3b82f620 10%, #3b82f650 20%, transparent 30%, transparent 40%, #10b98130 50%, transparent 60%, transparent 70%, #8b5cf640 80%, transparent 90%, transparent 100%)',
+        backgroundSize: '100% 200%',
+        animation: 'sidebarGlow 8s linear infinite',
+        zIndex: 1,
+      }} />
+
       {/* Logo / Title */}
       <div style={{ padding: '20px', borderBottom: '1px solid #1e293b' }}>
         <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.2em', color: '#64748b', textTransform: 'uppercase' }}>Syria</div>
@@ -38,16 +51,35 @@ export default function Sidebar({ activeTab, setActiveTab }) {
                 width: '100%', textAlign: 'left', padding: '10px 20px',
                 display: 'flex', alignItems: 'center', gap: '12px',
                 fontSize: '13px', fontWeight: isActive ? 600 : 500, cursor: 'pointer',
-                background: isActive ? '#1e293b' : 'transparent',
+                background: isActive ? 'rgba(59, 130, 246, 0.08)' : 'transparent',
                 color: isActive ? '#fff' : '#94a3b8',
-                borderLeft: isActive ? '3px solid #3b82f6' : '3px solid transparent',
-                border: 'none', borderLeft: isActive ? '3px solid #3b82f6' : '3px solid transparent',
-                transition: 'all 0.15s ease',
+                border: 'none',
+                borderLeft: isActive
+                  ? '3px solid #3b82f6'
+                  : '3px solid transparent',
+                boxShadow: isActive
+                  ? 'inset 0 0 20px rgba(59, 130, 246, 0.06), -2px 0 10px rgba(59, 130, 246, 0.1)'
+                  : 'none',
+                transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
               }}
-              onMouseEnter={(e) => { if (!isActive) { e.target.style.background = '#111827'; e.target.style.color = '#fff'; }}}
-              onMouseLeave={(e) => { if (!isActive) { e.target.style.background = 'transparent'; e.target.style.color = '#94a3b8'; }}}
+              onMouseEnter={(e) => {
+                if (!isActive) {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+                  e.currentTarget.style.color = '#fff';
+                  e.currentTarget.style.transform = 'scale(1.02)';
+                  e.currentTarget.style.paddingLeft = '22px';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!isActive) {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#94a3b8';
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.paddingLeft = '20px';
+                }
+              }}
             >
-              <span style={{ fontSize: '15px', width: '20px', textAlign: 'center', opacity: 0.7 }}>{t.icon}</span>
+              <span style={{ fontSize: '15px', width: '20px', textAlign: 'center', opacity: isActive ? 1 : 0.5, transition: 'opacity 0.2s' }}>{t.icon}</span>
               <span>{t.label}</span>
             </button>
           );
