@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LoginGate from './components/LoginGate';
 import Sidebar from './components/Sidebar';
 import ExecutiveTab from './components/ExecutiveTab';
 import FinancialTab from './components/FinancialTab';
@@ -32,7 +33,12 @@ const TAB_DESCRIPTIONS = {
 };
 
 export default function App() {
+  const [authenticated, setAuthenticated] = useState(false);
   const [activeTab, setActiveTab] = useState('executive');
+
+  if (!authenticated) {
+    return <LoginGate onAuth={() => setAuthenticated(true)} />;
+  }
 
   const renderTab = () => {
     switch (activeTab) {
