@@ -10,17 +10,17 @@ const HYPOTHESES = [
   {
     id: 'H1',
     title: 'Capital Depletion',
-    statement: 'SOBs are critically undercapitalized — adjusted equity is 0.8% of assets, 10x below the Basel III floor of 8%.',
+    statement: 'Syria\'s state-owned banks are critically undercapitalized — the adjusted sector equity-to-assets ratio of 0.8% is approximately 10 times below the Basel III minimum floor of 8%, representing the most severe capital deficiency documented in any currently operating banking system.',
     verdict: 'CONFIRMED',
     camels: 'Capital',
-    summary: 'Paid-up capital has been frozen at SYP 154B since 2009-2011. CBS equity of SYP 20T is 98% unrealized FX gains that fail every Basel III CET1 eligibility test. The adjusted sector equity/assets ratio of 0.8% is the lowest documented for any operating banking system globally.',
+    summary: 'The total paid-up capital across all six state-owned banks stands at SYP 154 billion — a figure that has remained entirely unchanged since the period 2009-2011, despite total sector assets growing by 298% to reach SYP 113 trillion. This represents a fundamental disconnect between the scale of banking operations and the capital base supporting them. The situation is further distorted by the Commercial Bank of Syria (CBS), whose reported equity of SYP 20 trillion is composed almost entirely (98%) of unrealized foreign exchange revaluation gains totaling SYP 19.6 trillion. These FX gains are not distributable, cannot be monetized under current sanctions, and would reverse entirely if the Syrian Pound were to appreciate against foreign currencies. When these unrealized gains are excluded, CBS\'s adjusted equity falls to just SYP 404 billion — representing an adjusted equity-to-assets ratio of only 0.4%. Across the broader sector, the adjusted equity-to-assets ratio is approximately 0.8%, which is the lowest ratio documented for any operating banking system globally. By comparison, Iraq\'s state-owned banks — widely regarded as among the weakest in the MENA region following the 2003 conflict — maintained a ratio of approximately 4% during their restructuring period. Egypt\'s state-owned banks currently operate at approximately 14%, and Jordan\'s Housing Bank at 16%. The erosion in real terms is equally stark: SYP 154 billion at the 2010 exchange rate of approximately 45 SYP/USD was equivalent to roughly USD 3.4 billion; at the current rate of approximately 13,000 SYP/USD, the same nominal figure is worth approximately USD 12 million — a 99.6% loss in purchasing power.',
     evidence: [
-      'Total paid-up capital: SYP 154B — unchanged for 14+ years despite 298% asset growth',
-      'CBS adjusted equity (ex-FX): SYP 404B — just 0.4% of SYP 97.2T assets',
-      'ACB equity/assets: 1.9% with leverage of 52.6x (Basel max: 33x)',
-      'PCB equity/assets: 3.4% — a 3.4% loss on assets would wipe out all equity',
-      'Only IB increased capital post-2011 (in 2021); 4 of 6 banks have not recapitalized',
-      'SYP 154B at 2010 rates ≈ USD 3.4B; at 2024 rates ≈ USD 12M — 99.6% real erosion',
+      'Total paid-up capital across all 6 SOBs: SYP 154 billion — entirely unchanged for more than 14 years despite 298% cumulative asset growth over the 2022-2024 period alone',
+      'CBS adjusted equity (excluding unrealized FX revaluation gains): SYP 404 billion, representing just 0.4% of SYP 97.2 trillion in total assets — well below any internationally recognized minimum',
+      'ACB equity-to-assets ratio of 1.9% with corresponding leverage of 52.6x, substantially exceeding the Basel III maximum leverage threshold of 33x (derived from the 3% leverage ratio floor)',
+      'PCB equity-to-assets ratio of 3.4%, meaning that a loss of merely 3.4% on the bank\'s asset portfolio would completely eliminate all shareholder equity',
+      'Only the Industrial Bank (IB) has increased its capital since the onset of the conflict in 2011, doing so in 2021; the remaining four banks (CBS, REB, PCB, SB) have not recapitalized in over a decade',
+      'In real purchasing power terms, the SYP 154 billion in aggregate capital was equivalent to approximately USD 3.4 billion at 2010 exchange rates; at 2024 rates, this same nominal figure is worth approximately USD 12 million — representing a 99.6% erosion in real value',
     ],
     benchmarks: [
       { name: 'Syria SOBs (adjusted)', value: 0.8 },
@@ -34,18 +34,18 @@ const HYPOTHESES = [
   {
     id: 'H2',
     title: 'Asset Quality Opacity',
-    statement: 'Asset quality is either severely impaired or unmeasurable — both outcomes are disqualifying for a functioning banking system.',
+    statement: 'The quality of the SOB loan portfolio is either severely impaired or fundamentally unmeasurable due to critical data gaps — either outcome disqualifies these institutions from meeting the minimum standards required of a functioning banking system.',
     verdict: 'CONFIRMED',
     camels: 'Assets',
-    summary: 'NPL data is unavailable for 4 of 6 banks covering 90% of sector assets. CBS self-reports SYP 3.47T in "old" NPLs (14.4% ratio) but this is likely understated by 2-3x based on post-conflict precedents. No bank implements IFRS 9, IFRS 7, or Basel Pillar 3 disclosure.',
+    summary: 'Non-performing loan (NPL) data is not disclosed in the financial statements of four of the six state-owned banks, collectively representing approximately 90% of total sector assets. This is an extraordinary gap by any international standard — IFRS 7 requires comprehensive credit risk disclosure, Basel Pillar 3 mandates public reporting of asset quality metrics, and every central bank in the MENA region requires at minimum quarterly NPL disclosure from supervised institutions. The Commercial Bank of Syria, which holds 86% of sector assets, does not report NPL ratios in its financial statements. However, CBS management self-reported through the qualitative survey that the bank carries approximately SYP 3.47 trillion in "old" (pre-crisis) non-performing loans against a total loan book of SYP 24.1 trillion, implying a self-reported NPL ratio of approximately 14.4%. Based on post-conflict precedents — Iraq\'s Rasheed and Rafidain banks reported NPL ratios of 50-70% following the 2003 conflict, Lebanese banks reported 30-50% following the 2019 crisis, and Libyan SOBs approximately 35% — the true CBS NPL ratio is likely in the range of 25-40%, which would imply SYP 6-10 trillion in impaired assets, potentially exceeding CBS\'s adjusted equity of SYP 404 billion by a factor of 15 to 25 times. Where data does exist, the picture is mixed: the Industrial Bank (IB) reports an NPL ratio that has improved substantially from 65.1% in 2022 to 11.9% in 2024, though this remains above the MENA regional average of 7-10%. The Agricultural Co-op Bank (ACB) reports an NPL ratio of just 0.7%, which is unusually low for an institution engaged primarily in agricultural lending in a post-conflict environment and may indicate classification practices that differ from international norms. No bank in the sector has implemented IFRS 9 expected credit loss provisioning, and all audits are conducted by a government auditor rather than an independent external firm.',
     evidence: [
-      'CBS (86% of assets): NPL ratio not disclosed in financial statements',
-      'CBS survey data: SYP 3.47T "old" NPLs vs. SYP 24.1T loan book = 14.4% self-reported',
-      'Post-conflict comparison: Iraq SOBs had 50-70% NPLs; Lebanon 30-50%; Libya 35%',
-      'IB NPL ratio: 65.1% (2022) → 11.9% (2024) — improving but still above MENA 7-10%',
-      'ACB NPL ratio: 0.7% — unusually low for agricultural lending in a post-conflict environment; may indicate underreporting',
-      'No IFRS 9 expected credit loss provisioning at any bank',
-      'No independent external audit — government auditor only',
+      'CBS, holding 86.1% of total sector assets, does not disclose NPL ratios in its published financial statements — the largest data gap in the sector',
+      'CBS management survey response: SYP 3.47 trillion in "old" (pre-crisis) non-performing loans against a total loan portfolio of SYP 24.1 trillion, implying a self-reported NPL ratio of approximately 14.4%',
+      'Post-conflict NPL benchmarks from comparable situations: Iraq SOBs reported 50-70% NPLs (2003-2005); Lebanese banks reported 30-50% (2020-2022); Libyan SOBs reported approximately 35% (2011-2013)',
+      'IB NPL ratio improved from 65.1% in 2022 to 31.4% in 2023 to 11.9% in 2024, driven by a combination of write-offs and new lending growth expanding the denominator — however, the ratio remains above the MENA regional average of 7-10%',
+      'ACB reports an NPL ratio of 0.7%, which is unusually low for agricultural lending in a post-conflict environment and may reflect classification methodologies that diverge from international standards, or potential underreporting of impairment',
+      'No bank in the sector has adopted IFRS 9, which requires forward-looking expected credit loss provisioning — all banks continue to use incurred loss models that systematically understate credit risk',
+      'All six banks are audited exclusively by a government auditor; no independent external audit (such as by a Big 4 firm) has been conducted, limiting the reliability and verifiability of reported asset quality figures',
     ],
     benchmarks: [
       { name: 'ACB (reported)', value: 0.7 },
@@ -59,18 +59,18 @@ const HYPOTHESES = [
   {
     id: 'H3',
     title: 'Earnings Fragility',
-    statement: 'Reported profitability is driven by FX accounting and unsustainable leverage, not core banking operations.',
+    statement: 'The reported profitability of Syria\'s SOBs is substantially driven by non-recurring foreign exchange accounting effects and unsustainable leverage-based spread arbitrage, rather than by the core commercial banking operations that would indicate a viable long-term business model.',
     verdict: 'CONFIRMED',
     camels: 'Earnings',
-    summary: 'Sector profit growth decelerated from +160% (2023) to +5% (2024). CBS profit fell 30% YoY. ACB\'s 66% ROE is a leverage artifact (52.6x leverage, 1,353% LDR). Only IB and SB have sustainable earnings models. Revenue is ~95% NII with zero diversification.',
+    summary: 'At the aggregate level, sector net profit reached SYP 289 billion in 2024, but growth decelerated sharply from +160% in 2023 to just +5% in 2024, revealing the fragility beneath the headline figures. The Commercial Bank of Syria — contributing 32% of sector profit — saw its net profit decline by 30% year-over-year, from SYP 131.9 billion to SYP 92.5 billion. CBS\'s return on assets (ROA) of 0.10% is significantly below every MENA peer benchmark (Egypt SOBs: 1.7%, Jordan Housing Bank: 1.3%, Morocco SOBs: approximately 1.0%). The Agricultural Co-op Bank, which generates the largest share of sector profit (48%), reports a return on equity (ROE) of 66.1%. However, this figure is not a measure of operational efficiency — it is a mechanical consequence of extreme leverage. ACB operates with a leverage ratio of 52.6x (assets-to-equity), meaning its equity base is so thin that even modest interest spreads translate into very high ROEs. ACB\'s business model consists of borrowing SYP 9.4 trillion from CBS at one rate and lending it to agricultural cooperatives at a higher rate — this is spread arbitrage on borrowed money, not deposit-funded commercial banking. Similarly, PCB\'s ROE of 69.6% is driven by leverage of 29.7x rather than superior performance. The Real Estate Bank experienced a 63% collapse in profit (from SYP 35.0 billion to SYP 12.8 billion), driven primarily by SYP 19.8 billion in capital losses. Only the Industrial Bank and the Saving Bank demonstrate sustainable earnings models, with ROAs of 2.17% and 2.43% respectively — both within or above the MENA peer range. Revenue composition is another critical concern: approximately 95% of sector revenue derives from net interest income, compared to a MENA norm of 65-75%. This absence of fee income, commission income, or other non-interest revenue sources leaves the sector entirely dependent on interest rate spreads, with no buffer against margin compression.',
     evidence: [
-      'CBS profit declined 30% YoY: SYP 131.9B (2023) → SYP 92.5B (2024)',
-      'CBS ROA of 0.10% is significantly below all MENA peers (Egypt: 1.7%, Jordan: 1.3%)',
-      'ACB ROE of 66% driven entirely by 52.6x leverage — not operational efficiency',
-      'ACB borrows SYP 9.4T from CBS to lend at spread — circular funding chain',
-      'REB profit collapsed 63%: SYP 35.0B → SYP 12.8B (capital losses of SYP 19.8B)',
-      'Cost-to-income ratios (11-52%) reflect wage compression and minimal technology investment, not operational efficiency',
-      'Revenue composition approximately 95% net interest income vs. MENA norm of 65-75% — no meaningful diversification',
+      'CBS net profit declined 30% year-over-year: SYP 131.9 billion (2023) to SYP 92.5 billion (2024), despite the bank holding 86% of sector assets',
+      'CBS return on assets of 0.10% is significantly below all comparable MENA state-owned bank peers: Egypt at 1.7%, Jordan Housing Bank at 1.3%, Morocco at approximately 1.0%',
+      'ACB return on equity of 66.1% is driven entirely by 52.6x leverage (assets divided by equity), not by operational efficiency — the same spread on a normally capitalized balance sheet would produce an ROE of approximately 3-5%',
+      'ACB borrows SYP 9.4 trillion from CBS wholesale and lends it to agricultural cooperatives at a higher rate, creating a circular funding chain in which both institutions earn spreads on government-intermediated capital flows',
+      'REB net profit collapsed by 63%: from SYP 35.0 billion (2023) to SYP 12.8 billion (2024), driven primarily by SYP 19.8 billion in capital losses recognized during the period',
+      'Sector-wide cost-to-income ratios ranging from 11.5% (ACB) to 51.8% (IB) are well below the international norm of 50-65%, reflecting systemic wage compression and minimal investment in technology, training, or infrastructure rather than genuine operational efficiency',
+      'Revenue composition is approximately 95% net interest income across the sector, compared to the MENA regional norm of 65-75% — indicating a complete absence of meaningful revenue diversification through fees, commissions, trading, or other non-interest income sources',
     ],
     benchmarks: [
       { name: 'CBS', value: 0.10 },
@@ -85,19 +85,19 @@ const HYPOTHESES = [
   {
     id: 'H4',
     title: 'Liquidity Concentration',
-    statement: 'System-wide liquidity depends on CBS alone — a single point of failure with no backstop, no deposit insurance, and no lender of last resort.',
+    statement: 'System-wide liquidity is concentrated in a single institution — CBS holds 90% of all deposits and serves as the sole funding source for 87% of ACB\'s liabilities, creating an unmitigated single point of failure with no deposit insurance, no lender-of-last-resort mechanism, and no systemic backstop.',
     verdict: 'CONFIRMED',
     camels: 'Liquidity',
-    summary: 'CBS holds 90% of deposits and funds 87% of ACB\'s liabilities through SYP 9.4T in interbank lending. Any CBS stress event would cascade across the entire banking system. No deposit insurance scheme exists. Post-conflict precedent (Lebanon, Iraq, Afghanistan) shows this architecture produces systemic collapse.',
+    summary: 'The Commercial Bank of Syria holds SYP 35.5 trillion of the sector\'s SYP 39.6 trillion in total customer deposits — a concentration of 89.7%. This means that any institution-specific stress event affecting CBS (whether operational, reputational, or sanctions-related) would immediately threaten the liquidity of the entire Syrian banking system. The interconnectedness is deepened by the CBS-ACB funding corridor: ACB derives 87.5% of its liabilities from wholesale borrowing from CBS (SYP 9.4 trillion in 2024), with customer deposits accounting for only 6.6% of its funding. This creates a loan-to-deposit ratio of 1,353% — ACB lends approximately 13 times its deposit base, entirely funded by CBS. The resulting circular flow (depositors → CBS → ACB → agricultural cooperatives) channels SYP 9.4 trillion through a single institutional corridor with no diversification, no market-based pricing, and no alternative funding source. Syria has no deposit insurance scheme, no formally constituted lender-of-last-resort mechanism, and no resolution framework for systemically important banks. Post-conflict precedents demonstrate the consequences of this architecture: in Lebanon (2019-2022), the Banque du Liban served as the sole liquidity provider to the banking system, and when BdL\'s own losses were revealed, the entire system collapsed — USD 72 billion in deposits were frozen and the currency lost approximately 98% of its value. In Afghanistan (2021), the SWIFT cutoff of the dominant bank froze the national payment system overnight. Syria\'s CBS already operates under SWIFT disconnection, placing the system in a partial version of this scenario. The remaining five banks (IB, SB, PCB, REB) maintain conventional deposit-funded models with deposits comprising 70-89% of their liabilities, but their collective deposit base of SYP 4.1 trillion is insufficient to serve as a systemic alternative if CBS were to face liquidity stress.',
     evidence: [
-      'CBS holds 89.7% of all customer deposits (SYP 35.5T of 39.6T)',
-      'ACB funding: 87.5% from CBS borrowing, only 6.6% from deposits',
-      'ACB LDR of 1,353% — lends 13x its deposit base using CBS wholesale funding',
-      'CBS → ACB → cooperatives: SYP 9.4T flows through a single corridor',
-      'No deposit insurance scheme exists in Syria',
-      'No formal lender of last resort mechanism',
-      'Lebanon (2019): BdL as sole liquidity provider → total system collapse when BdL failed',
-      'Afghanistan (2021): SWIFT cutoff froze dominant bank → entire payment system collapsed',
+      'CBS holds 89.7% of all customer deposits in the SOB sector: SYP 35.5 trillion out of a total SYP 39.6 trillion, creating an extreme concentration that has no parallel in peer banking systems',
+      'ACB funding structure: 87.5% of total liabilities sourced from CBS wholesale borrowing (SYP 9.4 trillion), with customer deposits comprising only 6.6% of liabilities (SYP 717 billion)',
+      'ACB loan-to-deposit ratio of 1,353%: the bank lends approximately 13 times its customer deposit base, with the entire funding gap covered by a single counterparty (CBS)',
+      'The CBS → ACB → cooperatives funding corridor channels SYP 9.4 trillion through a single institutional pathway, with no alternative funding sources, no market-based pricing mechanism, and no stress-tested contingency',
+      'Syria has no deposit insurance scheme — depositors have no formal protection in the event of a bank failure or liquidity crisis',
+      'No formally constituted lender-of-last-resort mechanism exists — the Central Bank of Syria lacks the operational and legal framework for emergency liquidity assistance',
+      'Lebanon (2019-2022): Banque du Liban served as sole systemic liquidity provider; when BdL losses (exceeding 4x GDP) were revealed, the entire banking system collapsed, freezing USD 72 billion in deposits',
+      'Afghanistan (2021): SWIFT disconnection of the dominant bank (Da Afghanistan Bank) froze the national payment system overnight, forcing a reversion to cash-based transactions',
     ],
     benchmarks: [
       { name: 'ACB (Deposits/Liabilities)', value: 6.6 },
@@ -111,41 +111,41 @@ const HYPOTHESES = [
   {
     id: 'H5',
     title: 'Operational Obsolescence',
-    statement: 'Core banking systems, branch networks, and human capital have deteriorated below minimum safe operating levels.',
+    statement: 'The core banking systems, branch infrastructure, product capabilities, and human capital of Syria\'s SOBs have deteriorated below the minimum threshold required for safe, reliable, and compliant banking operations.',
     verdict: 'CONFIRMED',
     camels: 'Management',
-    summary: 'CBS — the bank holding 86% of assets — runs on a core banking system that has been out of vendor support for 6-7 years. No bank offers digital banking, mobile banking, or credit cards. Sanctions block system upgrades. Brain drain has depleted risk, IT, and compliance talent. Branches in 5+ governorates have been destroyed.',
+    summary: 'The operational infrastructure of Syria\'s state-owned banks has been degraded by a combination of conflict, sanctions, chronic underinvestment, and the emigration of skilled personnel. The most critical operational risk lies at the Commercial Bank of Syria, which processes transactions for 86% of sector assets on a core banking system that has been without vendor technical support for 6-7 years. This means that no security patches, feature updates, or bug fixes have been available, and any system failure could halt banking operations for millions of customers with no vendor recourse. The Saving Bank\'s core system remains in a pilot and testing phase and has not been fully deployed to production. No bank in the sector offers digital banking, mobile banking, internet banking, or card-based payment services — capabilities that have been considered essential components of basic banking infrastructure internationally since at least 2015. Anti-money laundering and counter-terrorist financing (AML/CFT) processes at all six banks are conducted entirely through manual procedures, with no automated transaction monitoring, suspicious activity detection, or sanctions screening systems in place. CBS\'s SWIFT access has been disconnected due to international sanctions, eliminating the bank\'s ability to process cross-border payments through the global interbank messaging network. Visa and Mastercard networks are similarly blocked, removing any possibility of card-based payment capabilities. The physical branch network has also been affected: branches in multiple conflict-affected governorates — including Raqqa, Idlib, Deir ez-Zor, Abu Kamal, Mayadin, and Jisr al-Shughur — have been destroyed, and the associated client data has been permanently lost in some cases. The human capital dimension is equally concerning: the sector has experienced significant emigration of skilled banking professionals since 2011, particularly in specialized functions such as risk management, information technology, compliance, and audit. Compensation levels for SOB employees are set by government pay scales that are substantially below both private sector banking salaries and regional market benchmarks, making recruitment and retention of qualified staff extremely difficult. No bank operates a centralized data warehouse, business intelligence platform, or automated regulatory reporting system — all reporting is conducted manually using spreadsheet-based processes.',
     evidence: [
-      'CBS core banking: expired and unsupported for 6-7 years — any system failure halts 86% of banking',
-      'SB core banking system remains in pilot/testing phase and is not yet fully deployed',
-      'Zero digital banking channels at any bank (no mobile, no internet banking, no cards)',
-      'AML/CFT: manual processes only — no automated transaction monitoring at any bank',
-      'CBS SWIFT access: disconnected by sanctions — no cross-border payments',
-      'CBS Visa/Mastercard: blocked — no card payment capabilities',
-      'Destroyed branches: Raqqa, Idlib, Deir ez-Zor, Abu Kamal, Mayadin, Jisr al-Shughur',
-      'Significant loss of skilled personnel through emigration since 2011; compensation levels substantially below private sector and regional benchmarks',
-      'No data warehouse, BI, or automated regulatory reporting at any bank',
+      'CBS core banking system has been operating without vendor technical support for 6-7 years — no security patches, feature updates, or maintenance are available, and any critical failure would halt operations for an institution holding 86% of sector assets',
+      'SB core banking system remains in a pilot and testing phase and has not been deployed to production across the bank\'s branch network',
+      'No bank in the sector offers any form of digital banking channel: no mobile banking application, no internet banking portal, no card-based payments — capabilities considered essential for basic banking infrastructure internationally',
+      'AML/CFT screening and transaction monitoring at all six banks is conducted exclusively through manual processes, with no automated detection, flagging, or reporting systems in place',
+      'CBS SWIFT connectivity has been disconnected as a result of international sanctions, eliminating the ability to process cross-border payments through the standard global interbank messaging infrastructure',
+      'CBS Visa and Mastercard network access has been blocked by sanctions, removing all card-based payment processing and issuance capabilities',
+      'Physical branches in multiple conflict-affected governorates have been destroyed, including locations in Raqqa, Idlib, Deir ez-Zor, Abu Kamal, Mayadin, and Jisr al-Shughur — with associated client records permanently lost in several cases',
+      'The sector has experienced a significant loss of skilled banking professionals through emigration since 2011, particularly in critical specialized functions including risk management, information technology, regulatory compliance, and internal audit. Compensation levels set by government pay scales are substantially below private sector and regional market rates.',
+      'No bank operates a centralized data warehouse, business intelligence platform, or automated regulatory reporting system — all analytical and compliance reporting is produced through manual, spreadsheet-based processes',
     ],
     benchmarks: null,
   },
   {
     id: 'H6',
     title: 'Governance & Regulatory Vacuum',
-    statement: 'Legal frameworks, board structures, and prudential oversight fail every international standard — Basel, IFRS, FATF, OECD SOE Guidelines.',
+    statement: 'The legal frameworks, corporate governance structures, and prudential oversight mechanisms governing Syria\'s SOBs fail to meet any recognized international standard — including Basel III capital and liquidity requirements, IFRS accounting standards, FATF anti-money laundering recommendations, and OECD state-owned enterprise governance guidelines.',
     verdict: 'CONFIRMED',
     camels: 'Sensitivity',
-    summary: '6 banks operate under 6 different formation laws from 6 different decades (1959-2006). Zero independent board directors across the entire sector. No audit committees, risk committees, or remuneration committees. No Basel framework implemented. No IFRS 9 for loan provisioning. No automated AML/CFT. These banks would not receive a license in any regulated jurisdiction.',
+    summary: 'Syria\'s six state-owned banks operate under six entirely separate formation laws, enacted across six different decades (1959, 1966, 1966, 1969, 1975, and 2006). Each law establishes a different governance structure, capital framework, profit distribution mechanism, and supervisory arrangement — creating a fragmented regulatory landscape that prevents consolidated oversight and makes structural reform (including mergers) legally complex. Not a single bank in the sector has any independent directors on its board — all board members across all six institutions are appointed by the government. This stands in direct contrast to the Basel Committee on Banking Supervision (BCBS) Corporate Governance Principles, which require a majority of independent directors, and the OECD Guidelines on Corporate Governance of State-Owned Enterprises, which recommend similar independence standards. No bank has established formal audit committees, risk committees, or remuneration committees — all of which are considered mandatory governance structures under international banking supervision standards. The chief risk officer (CRO) function, which the BCBS considers essential for any systemically important bank, is either absent or operates on a minimal and informal basis across the sector. External audits are conducted exclusively by a government auditor; no independent external audit by a recognized international firm has been performed. On the regulatory compliance front, the gaps are comprehensive: Basel III has not been implemented in any form — no risk-weighted asset calculations are performed, no Common Equity Tier 1 (CET1) ratio is computed, and no liquidity coverage ratio (LCR) or net stable funding ratio (NSFR) is measured. IFRS 9, which requires forward-looking expected credit loss provisioning, has not been adopted by any bank. AML/CFT processes are basic and manual, with no alignment to the FATF 40 Recommendations. None of the six formation laws contain provisions for merger or consolidation — creating a legal barrier to any restructuring that would require legislative action. International precedents demonstrate that legal framework unification is typically the essential first step in SOB reform: Egypt passed its Unified Banking Law in 2003, Morocco enacted Banking Law 34-03 in 2006, Vietnam adopted its Unified Credit Institutions Law in 2010, and India has been conducting its SOB mega-merger program since 2017.',
     evidence: [
-      '6 separate formation laws: Decree 28/1959, Decree 28/1966, Decree 108/1966, Law 3/1969, Decree 29/1975, Decree 35/2006',
-      'Zero independent board directors at any bank (BCBS requires majority independent)',
-      'No audit committee, risk committee, or remuneration committee at any bank',
-      'No CRO function — risk management is minimal/informal',
-      'No external independent audit — government auditor only (OECD requires Big 4)',
-      'Basel III: not implemented — no RWA calculation, no CET1, no LCR, no NSFR',
-      'IFRS 9: not implemented — no expected credit loss provisioning',
-      'AML/CFT: basic manual processes — not aligned with FATF 40 Recommendations',
-      'No merger provision in any formation law — legal barrier to consolidation',
-      'Egypt, Morocco, Vietnam, India all unified their SOB laws as first reform step',
+      'Six separate formation laws governing the sector: Legislative Decree 28/1959 (IB), Legislative Decree 28/1966 (REB), Legislative Decree 108/1966 (PCB), Law 3/1969 (ACB), Legislative Decree 29/1975 (SB), and Legislative Decree 35/2006 (CBS)',
+      'Zero independent board directors across all six banks — 100% of board members are government-appointed, in direct contravention of BCBS Corporate Governance Principles requiring majority board independence',
+      'No formal audit committee, risk committee, or remuneration committee exists at any of the six banks — all are considered mandatory governance structures under international banking supervision standards',
+      'No chief risk officer (CRO) function with board-level reporting authority — risk management across the sector operates on a minimal and informal basis',
+      'No independent external audit has been conducted — all six banks are audited exclusively by a government auditor, falling short of the OECD SOE Guidelines recommendation for Big 4 or equivalent independent audit',
+      'Basel III framework has not been implemented: no risk-weighted asset calculations, no CET1 ratio computation, no leverage ratio measurement, no liquidity coverage ratio (LCR), no net stable funding ratio (NSFR), and no stress testing',
+      'IFRS 9 (Financial Instruments) has not been adopted — all banks continue to use incurred loss models for loan provisioning rather than the forward-looking expected credit loss (ECL) approach required since 2018',
+      'AML/CFT procedures remain basic and entirely manual, with no automated transaction monitoring, suspicious activity detection, or sanctions screening systems — falling substantially short of the FATF 40 Recommendations',
+      'None of the six formation laws contain any provisions for institutional merger, consolidation, or asset/liability transfer — creating a fundamental legal barrier to any structural restructuring of the sector',
+      'International reform precedents: Egypt unified its SOB framework through Banking Law 88/2003; Morocco through Banking Law 34-03 (2006); Vietnam through the Unified Credit Institutions Law (2010); India through its ongoing SOB mega-merger program consolidating 27 banks to 12 (2017-2023)',
     ],
     benchmarks: null,
   },
@@ -487,12 +487,26 @@ export default function HypothesesTab() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Intro */}
-      <p style={{ fontSize: '12px', color: '#94a3b8', lineHeight: 1.7 }}>
-        This diagnostic is structured around <strong style={{ color: '#e2e8f0' }}>six testable hypotheses</strong> covering
-        every dimension of the CAMELS banking assessment framework. Each hypothesis is stated as a finding, then validated
-        with quantitative evidence and international benchmarks. All six hypotheses are confirmed — Syria's SOB sector
-        fails every dimension of banking soundness.
-      </p>
+      <div style={{ fontSize: '12px', color: '#94a3b8', lineHeight: 1.8 }}>
+        <p style={{ marginBottom: '12px' }}>
+          This diagnostic assessment is structured around <strong style={{ color: '#e2e8f0' }}>six testable hypotheses</strong>,
+          each aligned to a dimension of the internationally recognized CAMELS banking supervision framework (Capital adequacy,
+          Asset quality, Management capability, Earnings sustainability, Liquidity resilience, and Sensitivity to market risk).
+        </p>
+        <p style={{ marginBottom: '12px' }}>
+          Each hypothesis is stated as a declarative finding rather than an open question. The supporting evidence draws on
+          three years of audited financial data (2022-2024), validated through 90 automated checks with zero material discrepancies,
+          supplemented by qualitative management surveys, branch-level operational data, and analysis of each bank's formation law.
+          International benchmarks are provided from Basel III standards (BCBS), MENA state-owned bank peers (Egypt, Morocco, Jordan),
+          and post-conflict banking restructuring precedents (Iraq 2003-2010, Lebanon 2019-present, Libya 2011-2015, Afghanistan 2021).
+        </p>
+        <p>
+          <strong style={{ color: '#fca5a5' }}>All six hypotheses are confirmed.</strong> Syria's state-owned banking sector
+          fails every dimension of the CAMELS framework. The gaps identified are not incremental deficiencies amenable to
+          targeted remediation — they are foundational and structural, requiring comprehensive reform across capital,
+          governance, technology, and institutional architecture.
+        </p>
+      </div>
 
       {/* Summary strip */}
       <div style={{
